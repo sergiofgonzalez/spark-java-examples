@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.joolzminer</groupId>
+		<artifactId>spark-java-examples-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>chapter03-writing-spark-apps</artifactId>
+	
+	<name>|-- chapter03-writing-spark-apps</name>
+
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>001-spark-basics</module>
+		<module>002-spark-basics-group-order</module>
+    	<module>003-spark-basics-filter-udf</module>
+		<module>004-spark-basics-load-multiple-files</module>
+ 	    <module>005-spark-basics-cluster-ready</module>
+	</modules>
+	
+</project>
