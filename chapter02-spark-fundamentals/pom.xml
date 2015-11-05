@@ -20,7 +20,8 @@
 		<module>003-find-even-nums</module>
 		<module>004-square-a-list</module>
 		<module>005-buyers-last-week</module>
-        <module>006-prize-giveaway</module>		
+        <module>006-prize-giveaway</module>
+        <module>007-max-word-length</module>     		
 	</modules>
 	
 </project>
