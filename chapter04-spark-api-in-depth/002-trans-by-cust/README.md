@@ -20,6 +20,9 @@ Obtain:
 + Find the number of purchases made by each client
 + Find the client who bought the greatest number of products
 
++ Include a complementary productID 4 to the client who bought the greatest number of products
++ Include a complementary productID 63 to the client who spent the most
+
 # Concepts
 Illustrates how to work with a `JavaPairRDD` and the basic `JavaPairRDD` functions such as:
 + Creation of pair RDD: `mapToPair`, 
