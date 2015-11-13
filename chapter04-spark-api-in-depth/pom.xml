@@ -17,6 +17,7 @@
 	<modules>
 		<module>001-pair-rdds-java</module>
 		<module>002-trans-by-cust</module>
+		<module>003-glom-transformation</module>
 	</modules>
 	
 </project>
