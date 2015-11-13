@@ -1,4 +1,4 @@
-002-trans-by-cust (*in progress*)
+002-trans-by-cust
 =================
 
 # Application Specs
