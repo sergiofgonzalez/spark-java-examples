@@ -18,6 +18,9 @@
 		<module>001-pair-rdds-java</module>
 		<module>002-trans-by-cust</module>
 		<module>003-glom-transformation</module>
+		<module>004-trans-products-join</module>
+		<module>005-additional-transformations</module>
+		<module>006-trans-products-sort</module>
 	</modules>
 	
 </project>
