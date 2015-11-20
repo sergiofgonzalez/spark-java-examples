@@ -21,6 +21,11 @@
 		<module>004-trans-products-join</module>
 		<module>005-additional-transformations</module>
 		<module>006-trans-products-sort</module>
+		<module>007-sort-with-complex-keys</module>
+	    <module>008-customer-statistics</module>
+	    <module>009-rdd-lineage</module>
+	    <module>010-accumulators</module>
+	    <module>011-accumulables</module>
 	</modules>
 	
 </project>
