@@ -17,6 +17,8 @@
 	<modules>
 		<module>001-local-vectors</module>
 		<module>002-local-matrices</module>
+		<module>003-distributed-matrices</module>
+		<module>004-housing-linear-regression</module>
 	</modules>
 	
 </project>
