@@ -19,6 +19,7 @@
 		<module>002-local-matrices</module>
 		<module>003-distributed-matrices</module>
 		<module>004-housing-linear-regression</module>
+		<module>005-loading-model-from-file</module>
 	</modules>
 	
 </project>
