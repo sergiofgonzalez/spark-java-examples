@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import scala.Tuple2;
+import scala.runtime.AbstractFunction2;
+import scala.runtime.BoxedUnit;
 
 import java.io.IOException;
 
@@ -25,9 +27,23 @@ public class AppRunner {
 			System.out.println("sparseVector:");
 			Arrays.stream(sparseVector.toSparse().toArray()).forEach(System.out::println);
 			printSeparator();
+			
+			prettyPrintVector(denseVector1);
 	}
 	
 	private static void printSeparator( ) {
 		System.out.println("======================================================================");
+	}
+	
+	private static void prettyPrintVector(Vector v) {
+		// i haven't been able to transform this into a lambda
+		v.foreachActive(new AbstractFunction2<Object, Object, BoxedUnit>() {
+
+			@Override
+			public BoxedUnit apply(Object index, Object value) {
+				System.out.println("#" + index + ": " + value);
+				return BoxedUnit.UNIT;
+			}
+		});
 	}
 }

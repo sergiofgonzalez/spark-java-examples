@@ -67,9 +67,31 @@ public class AppRunner {
 		System.out.println(((DenseMatrix)denseMatrix).toSparse());
 		printSeparator();
 		
+		
+		/* custom iteration */
+		prettyPrintLocalMatrix(denseMatrix);
+		printSeparator();
 	}
 	
 	private static void printSeparator( ) {
 		System.out.println("======================================================================");
+	}
+	
+	private static void prettyPrintLocalMatrix(Matrix matrix) {
+		double[] matrixAsArray = matrix.toArray();
+		
+		/* 
+		 * Note that i get the elements from left to right, top to bottom, first by col, then by row, 
+		 * so the first thing to do is transpose (use j to select the row, i to select the row)
+		 * 
+		 */
+		
+		for (int i = 0; i < matrix.numRows(); i++) {
+			for (int j = 0; j < matrix.numCols(); j++) {
+				System.out.print(String.format("%9.3f", matrixAsArray[j * matrix.numRows() + i]));
+			}
+			System.out.println();
+		}
+		
 	}
 }
