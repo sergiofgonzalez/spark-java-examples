@@ -20,6 +20,7 @@
 		<module>003-distributed-matrices</module>
 		<module>004-housing-linear-regression</module>
 		<module>005-loading-model-from-file</module>
+		<module>006-optimizing-linear-regression</module>
 	</modules>
 	
 </project>
