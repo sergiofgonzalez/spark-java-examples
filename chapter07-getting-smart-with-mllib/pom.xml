@@ -23,6 +23,7 @@
 		<module>006-optimizing-linear-regression</module>
 		<module>007-adding-higher-order-polynomials</module>
 		<module>008-regularization-lasso-ridge-regression</module>
+		<module>009-mini-batch-sgd</module>
 	</modules>
 	
 </project>
