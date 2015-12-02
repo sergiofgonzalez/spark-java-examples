@@ -21,6 +21,8 @@
 		<module>004-housing-linear-regression</module>
 		<module>005-loading-model-from-file</module>
 		<module>006-optimizing-linear-regression</module>
+		<module>007-adding-higher-order-polynomials</module>
+		<module>008-regularization-lasso-ridge-regression</module>
 	</modules>
 	
 </project>
