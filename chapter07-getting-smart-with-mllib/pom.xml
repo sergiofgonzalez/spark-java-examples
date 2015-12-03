@@ -24,6 +24,7 @@
 		<module>007-adding-higher-order-polynomials</module>
 		<module>008-regularization-lasso-ridge-regression</module>
 		<module>009-mini-batch-sgd</module>
+		<module>010-lbfgs-optimizer</module>
 	</modules>
 	
 </project>
