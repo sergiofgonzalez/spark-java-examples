@@ -154,6 +154,7 @@ public class AppRunner {
 			long numRowsTraining = housingDatasetTraining.count();
 			long numRowsTesting = housingDatasetTesting.count();
 			System.out.println("Original data set splitted using 80%-20% ratios: training=" + numRowsTraining + " row(s), testing=" + numRowsTesting + " row(s)");
+			printSeparator();
 			
 			/*
 			 * Step 3: Scaling the data using feature scaling and mean normalization
