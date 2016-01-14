@@ -17,7 +17,8 @@
 	<modules>
 		<module>001-census-logistic-regression</module>
 		<module>002-handwritten-digits-multiclass-logistic-regression</module>
-        <module>003-handwritten-digits-decision-tree</module>		
+        <module>003-handwritten-digits-decision-tree</module>
+        <module>004-handwritten-digits-random-forest</module>        		
 	</modules>
 	
 </project>
