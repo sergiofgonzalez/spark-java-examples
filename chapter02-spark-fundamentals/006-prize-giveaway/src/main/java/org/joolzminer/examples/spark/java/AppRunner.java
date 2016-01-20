@@ -12,6 +12,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+import java.io.Serializable;
+
+
 public class AppRunner {
 	
 	@SuppressWarnings("unused")
@@ -39,16 +42,17 @@ public class AppRunner {
 			
 			printSeparator();
 			System.out.println("Take: " + uniqueIds.take(5));
-			System.out.println("Min: " + uniqueIds.min(new Comparator<Integer>() {
-
-				@Override
-				public int compare(Integer o1, Integer o2) {
-					// TODO Auto-generated method stub
-					return 0;
-				}}));
+			System.out.println("Min: " + uniqueIds.min(intSerializableComparator()));
+			System.out.println("Max: " + uniqueIds.max((Comparator<Integer> & Serializable) Integer::compare));			
 		}
 	
 	}	
+	
+	
+	public static Comparator<Integer> intSerializableComparator() {
+		return (Comparator<Integer> & Serializable) Integer::compare;
+	}
+	
 	
 	private static final void printSeparator() {
 		System.out.println("================================================================");

@@ -1,12 +1,11 @@
-001-hello-spark
-================
+# 001-hello-spark
 
-# Application Specs
+## Application Specs
 This program loads the Apache Spark License file, counts the number of lines in that file and display the count on the console.
 
 
-# Concepts
+## Concepts
 Illustrates the very basics of Spark using Java.
 
-# Notes
+## Notes
 It is intended to be used in a local Spark installation.

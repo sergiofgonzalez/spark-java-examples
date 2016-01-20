@@ -1,8 +1,8 @@
-Spark Java Examples
-====================
+# Spark Java Examples
+> Examples from `Spark in Action MEAPv07` (Manning, 2015) ported to Java
 
 This project bundles Spark examples from the book **Spark in Action** but using the Java language instead of Scala.
-+ Chapter 02 - Spark Fundamentals : Spark shell scripts written as runnable Spark Java programs
-+ Chapter 03 - Writing Spark Apps : basic Spark functionality
-+ Chapter 07 - Spark MLlib        : MLlib machine learning
-+ Chapter 08 - Spark ML           : ML API
++ Chapter 02 &mdash; Spark Fundamentals 
++ Chapter 03 &mdash; Writing Spark Apps
++ Chapter 07 &mdash; Spark MLlib
++ Chapter 08 &mdash; Spark ML

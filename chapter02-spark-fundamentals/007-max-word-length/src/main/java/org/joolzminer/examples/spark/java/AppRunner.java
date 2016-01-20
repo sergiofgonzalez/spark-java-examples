@@ -25,7 +25,7 @@ public class AppRunner {
 	
 	public static void main(String[] args) {
 		SparkConf config = new SparkConf()
-								.setAppName("006-prize-giveaway")
+								.setAppName("007-max-word-length")
 								.setMaster("local[*]");
 
 		try (JavaSparkContext sparkContext = new JavaSparkContext(config)) {		
