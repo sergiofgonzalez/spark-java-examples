@@ -12,6 +12,7 @@ import org.apache.spark.broadcast.Broadcast;
 import org.apache.spark.sql.DataFrame;
 import org.apache.spark.sql.GroupedData;
 import org.apache.spark.sql.SQLContext;
+import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.api.java.UDF1;
 import org.apache.spark.sql.types.DataTypes;
 import org.slf4j.Logger;
@@ -82,7 +83,7 @@ public class AppRunner {
 			employeesPushOperationsByActorLoginOrderedByCount.show(50);
 			
 			LOGGER.info("Writing results in JSON format to `{}`", outDir);
-			employeesPushOperationsByActorLoginOrderedByCount.write().format("json").save(outDir);
+			employeesPushOperationsByActorLoginOrderedByCount.write().mode(SaveMode.Overwrite).format("json").save(outDir);
 		}
 
 		LOGGER.info("Execution took: {} msecs", Duration.between(startInstant, Instant.now()));

@@ -1,16 +1,16 @@
-005-spark-basics-cluster-ready
-====================================
+# 005-spark-basics-cluster-ready
 
-# Application Specs
+
+## Application Specs
 Based on the functionality of `004-spark-basics-filter-udf`, this program performs a filter on the results of the previous program matching the results with those found in the `ghEmployees.txt` file. In this example the results are written in JSON format to a given directory
 
-# Concepts
+## Concepts
 The program illustrates the definition of user defined functions `UDF` in filtering operations and how to broadcast variables to reduce the network traffic in cluster installations.
 
-# Notes
+## Notes
 To download the files used in the example you have to run the following commands:
 
-```
+```bash
 $ mkdir -p /tmp/github-archive
 $ cd /tmp/github-archive
 $ wget http://data.githubarchive.org/2015-03-01-{0..23}.json.gz
@@ -26,12 +26,12 @@ The application is prepared to be run locally or submitted to a cluster using `s
 
 
 You can create a runnable jar that can be submitted to execution using `spark-submit` using: 
-```
+```bash
 $ mvn clean package 
 ```
 
 You can either run it from Eclipse or use the following spark-submit command to execute it. The physiognomy of the spark-submit command is as follows:
-```
+```bash
 $ cd $SPARK_HOME
 $ ./bin/spark-submit --class {{class containing the main() method of your project}} \
    --master {{it's either local[*] or the location of a cluster such as: spark://ip-172-31-3-178:7077}} \
@@ -42,7 +42,7 @@ $ ./bin/spark-submit --class {{class containing the main() method of your projec
 
 For example, to execute this program in a local cluster, assuming the runnable jar is in the target directory you would use:
 
-```
+```bash
 $ cd $SPARK_HOME
 $ ./bin/spark-submit --class org.joolzminer.examples.spark.java.AppRunner \
   --master local[*] \
@@ -56,4 +56,4 @@ Note that in the previous example we will be:
 + writing the results on `/tmp/out`
 
 **NOTE**
-The execution will fail if `/tmp/out` already exists.
+The execution will no longer fail if `/tmp/out` already exists, as `SaveMode.Overwrite` is used.
