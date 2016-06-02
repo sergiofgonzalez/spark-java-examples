@@ -27,7 +27,7 @@ public class AppRunner {
 			
 			DataFrame githubLogDataFrame = sqlContext.read().json(Paths.get(inputDir, githubLogFilename).toString());
 			DataFrame pushOperationsDataFrame = githubLogDataFrame.filter("type = 'PushEvent'");
-			
+						
 			long totalNumberOfRecords = githubLogDataFrame.count();
 			long totalNumberOfPushes = pushOperationsDataFrame.count();
 			
@@ -36,9 +36,13 @@ public class AppRunner {
 			
 			printSeparator();
 			
+			System.out.println("-- SCHEMA --");
+			pushOperationsDataFrame.printSchema();
+			
 			System.out.println("SUMMARY:");
 			System.out.println(String.format("Total Number of records in (%s): %d", githubLogFilename, totalNumberOfRecords));
-			System.out.println(String.format("Total Number of pushes  in (%s): %d", githubLogFilename, totalNumberOfPushes));			
+			System.out.println(String.format("Total Number of pushes  in (%s): %d", githubLogFilename, totalNumberOfPushes));
+			
 		}
 		
 	}

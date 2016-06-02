@@ -20,6 +20,7 @@
     	<module>003-spark-basics-filter-udf</module>
 		<module>004-spark-basics-load-multiple-files</module>
  	    <module>005-spark-basics-cluster-ready</module>
+ 	    <module>e01-spring-async-file-downloader</module>
 	</modules>
 	
 </project>

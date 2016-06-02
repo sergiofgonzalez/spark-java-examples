@@ -16,6 +16,8 @@ $ cd /tmp/github-archive
 $ wget http://data.githubarchive.org/2015-03-01-{0..23}.json.gz
 $ gunzip -v *
 ```
+or use `e01-spring-async-file-downloader` to download the files to your local file system.
+
 A sample file with employees can be found in `src/main/resources/ghEmployees.txt`.
 
 The application is prepared to be run locally or submitted to a cluster using `spark-submit`. The application requires the following arguments:
