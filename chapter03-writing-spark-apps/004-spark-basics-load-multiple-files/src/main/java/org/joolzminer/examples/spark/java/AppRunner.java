@@ -43,7 +43,7 @@ public class AppRunner {
 			DataFrame pushOperationsByActorLogin = pushByActorLogin.count();
 			
 			DataFrame pushOperationsByActorLoginOrderedByCount = pushOperationsByActorLogin.orderBy(pushOperationsByActorLogin.col("count").desc());
-			
+			pushOperationsByActorLoginOrderedByCount.show(50);
 			
 			/* filtering using values from file */
 			String employeesFilename = "ghEmployees.txt";

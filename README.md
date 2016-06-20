@@ -1,5 +1,5 @@
 # Spark Java Examples
-> Examples from **Spark in Action MEAPv11** (*Manning*, 2015) ported to Java
+> Examples from **Spark in Action MEAPv12** (*Manning*, 2016) ported to Java
 
 This project bundles Spark examples from the book **Spark in Action** but using the Java language instead of Scala.
 + Chapter 02 &mdash; Spark Fundamentals 

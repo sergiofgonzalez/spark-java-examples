@@ -1,6 +1,7 @@
 package org.joolzminer.examples.spark.java;
 
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -36,11 +37,25 @@ public class AppRunner {
 			
 			
 			/* showing first 10 records in tabular form */
-			pushOperationsByActorLoginOrderedByCount.show(10);			
+			pushOperationsByActorLoginOrderedByCount.show(10, false); /* false means do not truncate output */			
 			printSeparator();
 			
-			/* Manual display of all entries */
+			/* 
+			 	Manual display of all entries
+			 	Note that the result is not strictly ordered, i guess that's because be haven't materialized the resulting
+			 	collection. 
+			 */
 			pushOperationsByActorLoginOrderedByCount.foreach(new DataFrameRowPrinter());
+			printSeparator();
+			
+			
+			/* 
+		 		However, if we materialize the results, then the ordering is correct.
+			 */
+			Arrays.stream(pushOperationsByActorLoginOrderedByCount.collect())
+				.forEach(System.out::println);
+
+			
 		}
 		
 	}

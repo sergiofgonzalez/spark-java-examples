@@ -61,14 +61,15 @@ public class AppRunner {
 			
 			/* Unit testing our recently defined UDF with SQL */
 			boolean result = sqlContext.sql("SELECT isEmployeeUDF('ZombieHippie')").head().getBoolean(0);		
-			System.out.println("Result of UDF execution for ZombieHippie: " + result);
-			
+			System.out.println("Result of UDF execution for ZombieHippie: " + result);			
 			printSeparator();
+			
+			
 			DataFrame employeesPushOperationsByActorLoginOrderedByCount = 
 					pushOperationsByActorLoginOrderedByCount
 							.filter(callUDF("isEmployeeUDF", col("login")));
 																	
-			employeesPushOperationsByActorLoginOrderedByCount.show();
+			employeesPushOperationsByActorLoginOrderedByCount.show(false);
 
 			printSeparator();			
 		}

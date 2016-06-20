@@ -5,7 +5,7 @@ logging:
 application:
 
     outputPath:
-        /tmp/data      # src/main/resources/data
+        /tmp/github-archive      # src/main/resources/data
         
     files: 
         - http://data.githubarchive.org/2015-03-01-0.json.gz

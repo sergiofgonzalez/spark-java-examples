@@ -32,7 +32,7 @@ public class AppRunner {
 			long totalNumberOfPushes = pushOperationsDataFrame.count();
 			
 			/* showing first 5 records in tabular form */
-			pushOperationsDataFrame.show(5);
+			pushOperationsDataFrame.show(5, false); /* false means don't truncate output */
 			
 			printSeparator();
 			

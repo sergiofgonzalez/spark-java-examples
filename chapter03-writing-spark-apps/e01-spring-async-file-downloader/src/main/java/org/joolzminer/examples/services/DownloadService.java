@@ -51,6 +51,13 @@ public class DownloadService {
 	
 	public void download(List<URI> uris) {
 
+		try {
+			Files.createDirectories(Paths.get(pathPrefix));
+		} catch (IOException e) {
+			LOGGER.error("Error creating output directory {}", pathPrefix, e);
+			throw new IllegalStateException("Error creating output directory");
+		}
+		
 		Stream<Pair<URI, ListenableFuture<ClientHttpResponse>>> asyncRequestPairs =
 				uris.stream()
 					.map(uri -> {
