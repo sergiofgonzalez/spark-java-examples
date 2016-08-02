@@ -31,7 +31,7 @@ public class AppRunner {
 		}
 		
 		try (JavaSparkContext sc = new JavaSparkContext(config)) {
-			JavaRDD<Integer> numsRDD = sc.parallelize(nums, 30);
+			JavaRDD<Integer> numsRDD = sc.parallelize(nums, 2);
 			System.out.println("numsRdd.count: " + numsRDD.count());
 			
 			JavaRDD<List<Integer>> glommedNumsRDD = numsRDD.glom();

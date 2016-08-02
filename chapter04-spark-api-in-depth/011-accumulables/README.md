@@ -1,6 +1,9 @@
 011-accumulables
 ================
 
+**Note**
+This approach is unnecessary complex. Use the code from e05-accumulables-sandbox instead.
+
 # Application Specs
 Create a custom accumulable to calculate the mean of the elements of an RDD of integers.
 The accumulable is a Tuple2 that contains the count of elements in its first element and the sum as its second element.

@@ -4,7 +4,8 @@
 This project bundles Spark examples from the book **Spark in Action** but using the Java language instead of Scala.
 + Chapter 02 &mdash; Spark Fundamentals 
 + Chapter 03 &mdash; Writing Spark Apps
-+ Chapter 04 &msash; Spark API in depth
++ Chapter 04 &mdash; Spark API in depth
++ Chapter 05 &mdash; Spark SQL
 + Chapter 07 &mdash; Spark MLlib
 + Chapter 08 &mdash; Spark ML
 

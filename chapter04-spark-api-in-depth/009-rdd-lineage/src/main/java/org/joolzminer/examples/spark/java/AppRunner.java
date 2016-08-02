@@ -34,8 +34,15 @@ public class AppRunner {
 			
 			/* create a pair RDD */
 			JavaPairRDD<Integer, Integer> pairs = listrdd.mapToPair(x -> new Tuple2<>(x, x * x));
+			List<List<Tuple2<Integer, Integer>>> partitionArrangement = pairs.glom().collect();
 
-			/* reduce by key: causes shuffling */
+			/* Note that keys will be distributed among partitions */
+			LOGGER.debug("Num partitions: {}", partitionArrangement.size());
+			partitionArrangement.forEach(System.out::println);
+			
+			printSeparator();
+
+			/* reduce by key: causes shuffling because keys are distributed across partitions */
 			JavaPairRDD<Integer, Integer> reduced = pairs.reduceByKey((v1, v2) -> v1 + v2);
 
 			/* map within partition */

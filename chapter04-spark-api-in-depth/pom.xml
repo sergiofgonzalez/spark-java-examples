@@ -26,6 +26,11 @@
 	    <module>009-rdd-lineage</module>
 	    <module>010-accumulators</module>
 	    <module>011-accumulables</module>
+	    <module>e01-java-pair-rdds-basics</module>
+	    <module>e02-partitioning</module>
+	    <module>e03-joins</module>
+	    <module>e04-join-sandbox</module>
+	    <module>e05-accumulables-sandbox</module>
 	</modules>
 	
 </project>

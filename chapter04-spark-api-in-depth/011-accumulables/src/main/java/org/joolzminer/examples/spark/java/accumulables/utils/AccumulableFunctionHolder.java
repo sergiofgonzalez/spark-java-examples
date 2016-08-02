@@ -14,15 +14,14 @@ import java.util.function.UnaryOperator;
  */
 public interface AccumulableFunctionHolder<V, T> {
 	/**
-	 * Must return the zero function, which creates an initial value that's passed to the
-	 * workers.
+	 * Must return the zero function, which creates an initial value that's passed to the workers.
 	 * 
 	 * @return the zero function, whose signature is T -> T, T being the type of the Accumulable elements.
 	 */
 	UnaryOperator<T> getZeroFn();
 	
 	/**
-	 * Must return the addInPlace function, which merges to accumulated values.
+	 * Must return the addInPlace function, which merges two accumulated values.
 	 *  
 	 * @return the addInPlace function, whose signature is (T, T) -> T, T being the type of the Accumulable elements.
 	 */

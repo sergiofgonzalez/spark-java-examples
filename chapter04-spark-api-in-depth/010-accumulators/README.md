@@ -7,7 +7,7 @@
 + Compute the average of the numbers of an RDD using a custom Accumulable that keeps track of the count and the total.  
 
 # Concepts 
-Accumulators and Accumulables. The programs include an example of a custom Accumulable
+Accumulator
 
 # Notes
 n/a

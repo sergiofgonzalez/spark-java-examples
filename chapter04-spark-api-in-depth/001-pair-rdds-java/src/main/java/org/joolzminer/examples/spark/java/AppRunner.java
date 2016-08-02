@@ -27,12 +27,12 @@ public class AppRunner {
 		try (JavaSparkContext sc = new JavaSparkContext(config)) {
 			
 			/* You can create a `JavaPairRDD` with `JavaSparkContext.parallelizePairs` */
-			JavaPairRDD<String, Integer> alphabetPairRDD = sc.parallelizePairs(Arrays.asList(
+			JavaPairRDD<String, Integer> alphabetJavaPairRDD = sc.parallelizePairs(Arrays.asList(
 														  new Tuple2<String, Integer>("a", 1),
 														  new Tuple2<String, Integer>("b", 2),
 														  new Tuple2<String, Integer>("c", 3)));
 			
-			System.out.println("The PairRDD have " + alphabetPairRDD.count() + " element(s)");
+			System.out.println("The PairRDD have " + alphabetJavaPairRDD.count() + " element(s)");
 			
 			/* 
 			 * You can use a `mapToPair` transformation on a `JavaRDDLike` and pass it a PairFunction
@@ -40,13 +40,13 @@ public class AppRunner {
 			 */
 			
 			
-			JavaRDD<Integer> rdd = sc.parallelize(IntListBuilder
-													.getInts()
-													.from(1)
-													.to(5)
-													.build());
+			JavaRDD<Integer> numsJavaRDD = sc.parallelize(IntListBuilder
+															.getInts()
+															.from(1)
+															.to(5)
+															.build());
 			
-			JavaPairRDD<Integer, Boolean> pairs = rdd.mapToPair(num -> new Tuple2<>(num, false));
+			JavaPairRDD<Integer, Boolean> pairs = numsJavaRDD.mapToPair(num -> new Tuple2<>(num, false));
 			
 			System.out.println("The pairs have " + pairs.count() + " element(s)");
 		}
