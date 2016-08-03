@@ -16,6 +16,7 @@
 	
 	<modules>
 		<module>001-creating-dataframes-from-rdds</module>
+		<module>002-dataframes-api-basics</module>
 	</modules>
 	
 </project>
