@@ -1,5 +1,5 @@
 # 007-joining-dataframes
-> joining data from DataFrames
+> joining data from DataFrames using Spark API
 
 ## Application Specs
 Using the `italianPosts.csv` as the input data source, which features the following structure of fields delimited by **~**:
@@ -35,7 +35,7 @@ Obtain:
  
 
 ## Concepts
-+ Grouping and aggregating data
++ Performing joins using Spark DataFrames DSL API
 
 ## Notes
 n/a
