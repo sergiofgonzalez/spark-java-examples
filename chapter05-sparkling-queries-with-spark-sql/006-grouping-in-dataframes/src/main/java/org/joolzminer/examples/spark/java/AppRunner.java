@@ -145,7 +145,7 @@ public class AppRunner {
 			aggregateDF.show();
 			
 			/*
-			 * 7.
+			 * 7. Calculate the rollup and cube for the authors between 13 and 15
 			 */
 			
 			// a. Select the posts from ownerUserId >= 13 and ownerUserId <= 15
