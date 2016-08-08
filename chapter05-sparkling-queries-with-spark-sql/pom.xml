@@ -20,6 +20,7 @@
 		<module>003-dataframes-api-functions</module>
 		<module>004-dataframes-missing-values</module>
 		<module>005-dataframes-to-rdds</module>
+		<module>006-grouping-in-dataframes</module>
 	</modules>
 	
 </project>
