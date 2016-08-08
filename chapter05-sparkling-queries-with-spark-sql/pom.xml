@@ -18,6 +18,7 @@
 		<module>001-creating-dataframes-from-rdds</module>
 		<module>002-dataframes-api-basics</module>
 		<module>003-dataframes-api-functions</module>
+		<module>004-dataframes-missing-values</module>
 	</modules>
 	
 </project>
