@@ -19,6 +19,7 @@
 		<module>002-dataframes-api-basics</module>
 		<module>003-dataframes-api-functions</module>
 		<module>004-dataframes-missing-values</module>
+		<module>005-dataframes-to-rdds</module>
 	</modules>
 	
 </project>
