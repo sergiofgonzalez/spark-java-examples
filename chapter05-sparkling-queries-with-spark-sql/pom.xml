@@ -22,6 +22,7 @@
 		<module>005-dataframes-to-rdds</module>
 		<module>006-grouping-in-dataframes</module>
 		<module>007-joining-dataframes</module>
+		<module>008-using-sql-and-hql</module>
 	</modules>
 	
 </project>
