@@ -23,6 +23,7 @@
 		<module>006-grouping-in-dataframes</module>
 		<module>007-joining-dataframes</module>
 		<module>008-using-sql-and-hql</module>
+		<module>009-saving-and-loading-dataframes</module>
 	</modules>
 	
 </project>
