@@ -36,10 +36,12 @@ Obtain:
 5. From the tables registered in the metastore create new dataframes 
 6. Delete the recently created tables from the Hive metastore
 7. Load data from relational db using JDBC
+  + Load data from relational db using JDBC but specifying a predicate so that not all records are loaded
 8. Refresh the data in the db and check data is refreshed
   + Set a breakpoint and modify some of the table's data
 9. Load data from JSON file, and check that the schema is inferred (note: timestamps are declared as strings)
 10. Load data from Parquet file, and check that the schema is perfectly inferred
+11. Load data from relational db using JDBC but specifying a predicate so that not all records are loaded
 
 ## Concepts
 + Registering temporary tables

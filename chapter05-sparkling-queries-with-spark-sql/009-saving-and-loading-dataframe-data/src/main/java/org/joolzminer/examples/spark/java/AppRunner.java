@@ -10,6 +10,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.DataFrame;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.RowFactory;
+import org.apache.spark.sql.SQLContext;
 import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.hive.HiveContext;
 import org.apache.spark.sql.types.DataTypes;
@@ -100,7 +101,7 @@ public class AppRunner {
 			 */
 			postsDF.write().mode(SaveMode.Overwrite).jdbc("jdbc:mysql://localhost:3306/mysparkdfs", "posts", new Properties() {{
 				setProperty("user", "root");
-				setProperty("password", "pass");
+				setProperty("password", "passwd");
 			}});
 			printSeparator();
 			
@@ -109,7 +110,7 @@ public class AppRunner {
 			 */
 			postsDF.write().mode(SaveMode.Append).jdbc("jdbc:mysql://localhost:3306/mysparkdfs", "posts_empty", new Properties() {{
 				setProperty("user", "root");
-				setProperty("password", "pass");
+				setProperty("password", "passwd");
 			}});
 			printSeparator();
 			
@@ -160,7 +161,14 @@ public class AppRunner {
 			 */
 			DataFrame postsFromJdbcDF = hiveContext.read().jdbc("jdbc:mysql://localhost:3306/mysparkdfs", "posts", new Properties() {{
 				setProperty("user", "root");
-				setProperty("password", "pass");
+				setProperty("password", "passwd");
+			}});
+			postsFromJdbcDF.show();
+			
+			// You can also specify a predicate to load only a subset of the records
+			postsFromJdbcDF = hiveContext.read().jdbc("jdbc:mysql://localhost:3306/mysparkdfs", "posts", new String[] { "id = 1181"}, new Properties() {{
+				setProperty("user", "root");
+				setProperty("password", "passwd");
 			}});
 			postsFromJdbcDF.show();
 			printSeparator();
@@ -170,7 +178,7 @@ public class AppRunner {
 			 */
 			postsFromJdbcDF = hiveContext.read().jdbc("jdbc:mysql://localhost:3306/mysparkdfs", "posts", new Properties() {{
 				setProperty("user", "root");
-				setProperty("password", "pass");
+				setProperty("password", "passwd");
 			}});
 			postsFromJdbcDF.show();
 			printSeparator();
