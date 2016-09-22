@@ -21,6 +21,7 @@
         <module>chapter03-writing-spark-apps</module>
         <module>chapter04-spark-api-in-depth</module>
         <module>chapter05-sparkling-queries-with-spark-sql</module>
+        <module>chapter06-ingesting-data-with-spark-streaming</module>
         <module>chapter07-getting-smart-with-mllib</module>
         <module>chapter08-ml-classification-and-clustering</module>        
     </modules>

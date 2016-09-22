@@ -20,7 +20,7 @@
 
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value>Accenture1</value>
+    <value>the-password</value>
     <description>Metastore database password</description>
   </property>
   
