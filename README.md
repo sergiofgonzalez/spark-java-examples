@@ -1,15 +1,11 @@
 # Spark Java Examples
-> Examples from **Spark in Action MEAPv12** (*Manning*, 2016) ported to Java
+> Examples from **Spark in Action** (*Manning*, 2017) and other sources, all of them in Java
 
-This project bundles Spark examples from the book **Spark in Action** but using the Java language instead of Scala.
-+ Chapter 02 &mdash; Spark Fundamentals 
-+ Chapter 03 &mdash; Writing Spark Apps
-+ Chapter 04 &mdash; Spark API in depth
-+ Chapter 05 &mdash; Spark SQL
-+ Chapter 06 &mdash; Spark Streaming
-+ Chapter 07 &mdash; Spark MLlib
-+ Chapter 08 &mdash; Spark ML
+This project bundles *Apache Spark* using Java language instead of Scala.
 
-**NOTE:**
+The examples have been classified as follows:
++ [00 &mdash; Support, Common Components, Patterns and Idioms](./00-support/)
++ [01 &mdash; Spark Core API](./01-spark-core/)
 
-The examples have been tested on `spark-1.6.1-bin-hadoop2.6` distribution.
+
+The examples have been tested on `spark-2.1.1-bin-hadoop2.7` distribution.

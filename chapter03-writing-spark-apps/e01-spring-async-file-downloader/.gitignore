@@ -1,8 +1,0 @@
-target
-.classpath
-.project
-.settings
-.springBeans
-/.apt_generated/
-src/main/resources/data
-.factorypath
