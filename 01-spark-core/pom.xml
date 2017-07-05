@@ -20,6 +20,8 @@
     <module>002-hello-filter</module>
     <module>003-hello-map</module>        
     <module>004-hello-flatmap</module>            
+    <module>005-hello-sampling</module>
+    <module>006-hello-basic-statistics</module>    
   </modules>
 
 </project>

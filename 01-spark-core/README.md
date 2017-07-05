@@ -12,3 +12,9 @@ Illustrates how to use the `JavaRDD.filter` method used to filter out records fr
 
 ## [04 &mdash; Hello `flatMap`](./004-hello-flatmap/)
 Illustrates how to use the `JavaRDD.flatmap` method used to flatten an RDD whose elements are also collections.
+
+## [05 &mdash; Hello Sampling](./005-hello-sampling/)
+Illustrates how to use the `JavaRDD.sample` transformation and the `JavaRDD.takeSample` action.
+
+## [06 &mdash; Hello Basic Statistics](./006-hello-basic-statistics/)
+Illustrates how to obtain basic statistics (such as the mean, stdev, etc.) from a `JavaDoubleRDD`.
