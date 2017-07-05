@@ -9,3 +9,6 @@ Illustrates how to use the `JavaRDD.filter` method used to filter out records fr
 
 ## [03 &mdash; Hello `map`](./003-hello-map/)
 Illustrates how to use the `JavaRDD.filter` method used to filter out records from an *RDD*. In the example, we demonstrate how to filter the lines from an `JavaRDD<String>` that match a particular string.
+
+## [04 &mdash; Hello `flatMap`](./004-hello-flatmap/)
+Illustrates how to use the `JavaRDD.flatmap` method used to flatten an RDD whose elements are also collections.
