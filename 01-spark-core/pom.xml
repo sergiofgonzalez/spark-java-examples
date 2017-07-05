@@ -17,6 +17,8 @@
 
   <modules>
     <module>001-hello-spark</module>
+    <module>002-hello-filter</module>
+    <module>003-hello-map</module>        
   </modules>
 
 </project>

@@ -16,6 +16,6 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>001-hello-world</module>
+    <module>001-int-list-builder</module>
   </modules>
 </project>

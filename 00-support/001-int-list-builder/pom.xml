@@ -8,16 +8,31 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>001-hello-world</artifactId>
+  <artifactId>001-int-list-builder</artifactId>
 
-  <name>|---- 001-hello-spark</name>
+  <name>|---- 001-int-list-builder</name>
   <description>
         See README.md for complete details.
   </description>
 
   <properties>
+    <junit.version>4.12</junit.version>
+    <hamcrest.version>1.3</hamcrest.version>
   </properties>
 
   <dependencies>
+    <!-- ### Test ### -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-library</artifactId>
+      <version>${hamcrest.version}</version>
+    </dependency>
+        
   </dependencies>
 </project>
