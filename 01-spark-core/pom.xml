@@ -21,7 +21,8 @@
     <module>003-hello-map</module>        
     <module>004-hello-flatmap</module>            
     <module>005-hello-sampling</module>
-    <module>006-hello-basic-statistics</module>    
+    <module>006-hello-basic-statistics</module>
+    <module>007-hello-histograms</module>
   </modules>
 
 </project>

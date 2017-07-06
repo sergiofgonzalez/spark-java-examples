@@ -16,7 +16,7 @@ public class AppRunner {
 	
 	public static void main(String[] args) {
 		SparkConf config = new SparkConf()
-								.setAppName("005-hello-sampling")
+								.setAppName("006-hello-basic-statistics")
 								.setMaster("local[*]");
 		
 		try (JavaSparkContext jsc = new JavaSparkContext(config)) {						
