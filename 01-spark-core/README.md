@@ -18,3 +18,9 @@ Illustrates how to use the `JavaRDD.sample` transformation and the `JavaRDD.take
 
 ## [06 &mdash; Hello Basic Statistics](./006-hello-basic-statistics/)
 Illustrates how to obtain basic statistics (such as the mean, stdev, etc.) from a `JavaDoubleRDD`.
+
+## [07 &mdash; Hello Histograms](./007-hello-histograms/)
+Illustrates how to obtain a histogram from the data inside a `JavaDoubleRDD`.
+
+## [08 &mdash; Hello Approx Sum and Mean](./008-hello-approx-sum-and-mean/)
+Illustrates how to obtain an approximate sum and mean from a `JavaDoubleRDD`.

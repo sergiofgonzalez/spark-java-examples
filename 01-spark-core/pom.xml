@@ -23,6 +23,7 @@
     <module>005-hello-sampling</module>
     <module>006-hello-basic-statistics</module>
     <module>007-hello-histograms</module>
+    <module>008-hello-approx-sum-and-mean</module>    
   </modules>
 
 </project>

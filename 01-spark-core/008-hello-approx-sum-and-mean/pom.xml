@@ -8,9 +8,9 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>007-hello-histograms</artifactId>
+  <artifactId>008-hello-approx-sum-and-mean</artifactId>
 
-  <name>|---- 007-hello-histograms</name>
+  <name>|---- 008-hello-approx-sum-and-mean</name>
   <description>
     See README.md for complete details.
   </description>
@@ -38,6 +38,13 @@
       <artifactId>spark-sql_${scala.tools.version}</artifactId>
       <version>${spark.version}</version>
       <scope>compile</scope>
+    </dependency>
+
+    <!-- ### Support: IntListBuilder ### -->
+    <dependency>
+      <groupId>org.joolzminer</groupId>
+      <artifactId>001-int-list-builder</artifactId>
+      <version>${support.version}</version>
     </dependency>
 
 
