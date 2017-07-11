@@ -1,6 +1,7 @@
-import java.util.List;
+package org.joolzminer.examples.spark.java.utils;
 
-import org.joolzminer.examples.spark.java.IntListBuilder;
+import java.util.List;
+import org.joolzminer.examples.spark.java.utils.IntListBuilder;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

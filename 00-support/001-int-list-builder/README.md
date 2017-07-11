@@ -1,4 +1,5 @@
 # 001-int-list-builder
+> Simple DSL to build a list of integers 
 
 ## Application Specs
 This support class is a convenience class to build a list of integers using a simple DSL that resembles Scala to/by syntax.

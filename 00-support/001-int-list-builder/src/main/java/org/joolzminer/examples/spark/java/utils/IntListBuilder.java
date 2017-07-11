@@ -1,4 +1,4 @@
-package org.joolzminer.examples.spark.java;
+package org.joolzminer.examples.spark.java.utils;
 
 import java.util.ArrayList;
 import java.util.List;
