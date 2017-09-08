@@ -41,7 +41,7 @@ Example 3: Generate list of numbers from 5 to 3 (inclusive)
 You can use this class from the examples by adding the following dependency to your POM:
 ```xml
     <dependency>
-      <groupId>org.joolzminer</groupId>
+      <groupId>com.github.sergiofgonzalez</groupId>
       <artifactId>001-int-list-builder</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>

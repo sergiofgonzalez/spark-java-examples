@@ -3,7 +3,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.joolzminer</groupId>
+  <groupId>com.github.sergiofgonzalez</groupId>
   <artifactId>spark-java-examples-parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
@@ -18,6 +18,7 @@
   <modules>
     <module>00-support</module>
     <module>01-spark-core</module>
+    <module>99-spark-apps</module>
   </modules>
 
   <properties>
@@ -25,6 +26,15 @@
     <!-- JDK compiler options -->
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    
+    <!-- version properties -->
+    <scala.tools.version>2.11</scala.tools.version>
+    <spark.version>2.2.0</spark.version>
+    
+    <support.version>1.0.0-SNAPSHOT</support.version>
+        
+    <junit.version>4.12</junit.version> 
+    <assertj.version>3.8.0</assertj.version>
   </properties>
 
   <developers>
