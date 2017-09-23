@@ -111,10 +111,10 @@ In order to run the test, simply validate the `spark-job.conf` is selecting `not
 Note that the output contains a log of *sysouts* that will be used in the subsequent tests to verify that the configuration is properly synced in all the Spark cluster executors.
 
 #### Features Tested
-[X] Statically configuration correctly loaded through SparkApplicationTemplate
-[X] Statically selected profiles
-[X] Spark Master configured as selected
-[X] Merging of common properties with application-level properties
++ [X] Statically configuration correctly loaded through SparkApplicationTemplate
++ [X] Statically selected profiles
++ [X] Spark Master configured as selected
++ [X] Merging of common properties with application-level properties
 
 ### Running from Eclipse using a statically defined Configuration: Using encryption
 This is a twist on the previous test that demonstrates how to fine-tune Spark through the SparkApplicationTemplate initialization hook, and also that the configuration allows for using the *s3a* protocol. As accessing S3 requires using authentication details, the encryption features of *wconf* are also used. 
@@ -151,10 +151,10 @@ In order to run the test, simply validate the `spark-job.conf` is selecting `not
 Note that the output contains a log of *sysouts* that will be used in the subsequent tests to verify that the configuration is properly synced in all the Spark cluster executors.
 
 #### Features Tested
-[X] Dynamic profile selection using command line arguments
-[X] Initialization hook
-[X] s3a file system
-[X] Encryption
++ [X] Dynamic profile selection using command line arguments
++ [X] Initialization hook
++ [X] s3a file system
++ [X] Encryption
 
 
 ### Running on local installation of Spark: running from jar
@@ -202,8 +202,8 @@ $ ./bin/spark-submit --master local[*] \
 
 
 #### Features Tested
-[X] Running from executable jar
-[X] Overriding application properties
++ [X] Running from executable jar
++ [X] Overriding application properties
 
 
 ### Running on a Spark cluster: using statically defined configuration
@@ -262,13 +262,9 @@ wconf =>: dummy=a dummy value set in clustered-aws profile
 ```
 
 #### Features Tested
-[X] Running on Apache Spark cluster
-[X] Profile selection in sync between master and worker nodes
++ [X] Running on Apache Spark cluster
++ [X] Profile selection in sync between master and worker nodes
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Running on a Spark cluster: using external config file
 In this section, we use an external config file to validate that *SparkApplicationTemplate* and *wconf* work well together even when the configuration is not packaged with the jar. 
@@ -326,7 +322,7 @@ wconf =>: dummy=a dummy value set in ext-clustered-aws profile
 ```
 
 #### Features Tested
-[X] Configuration in-sync even when using external config file
++ [X] Configuration in-sync even when using external config file
 
 
 ## Caveats and Further Considerations
