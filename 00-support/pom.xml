@@ -17,5 +17,7 @@
 
   <modules>
     <module>001-int-list-builder</module>
+    <module>002-spark-template</module>
+    <module>003-s3-file-uploader</module>
   </modules>
 </project>

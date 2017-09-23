@@ -4,34 +4,41 @@
 
   <parent>
     <groupId>com.github.sergiofgonzalez</groupId>
-    <artifactId>99-spark-apps</artifactId>
+    <artifactId>00-support</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>001-github-activity-analysis-v1</artifactId>
+  <artifactId>002-spark-template</artifactId>
 
-  <name>|---- 001-github-activity-analysis-v1</name>
+  <name>|---- 002-spark-template</name>
   <description>
-    See README.md for complete details.
+        See README.md for complete details.
   </description>
 
-  <dependencies>
 
-    <!-- ### Spark ### -->
+  <dependencies>
+      <!-- ### Spark ### -->
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-core_${scala.tools.version}</artifactId>
       <version>${spark.version}</version>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-sql_${scala.tools.version}</artifactId>
       <version>${spark.version}</version>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     
+    <!-- ### Additional Deps ### -->
+    <dependency>
+      <groupId>com.github.sergiofgonzalez</groupId>
+      <artifactId>waterfall-config</artifactId>
+      <version>${wconf.version}</version>
+    </dependency>
+  
     <!-- ### Test ### -->
     <dependency>
       <groupId>junit</groupId>
@@ -46,6 +53,6 @@
       <version>${assertj.version}</version>
       <scope>test</scope>
     </dependency>
-        
+         
   </dependencies>
 </project>

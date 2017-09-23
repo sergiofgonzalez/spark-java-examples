@@ -4,3 +4,5 @@ target
 .classpath
 *.log
 metastore_db
+*.jceks
+*.jks
