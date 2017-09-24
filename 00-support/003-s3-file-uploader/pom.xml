@@ -17,7 +17,6 @@
 
   <properties>
     <aws-java-sdk-s3.version>1.11.201</aws-java-sdk-s3.version>
-    <apache-httpclient.version>4.5.3</apache-httpclient.version>
     <apache-commons-io.version>2.5</apache-commons-io.version>
   </properties>
 
