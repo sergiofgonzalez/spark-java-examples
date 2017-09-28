@@ -1,0 +1,10 @@
+Sensor1,Temperature,weighting,2017-09-07T22:00,69.82
+Sensor2,Humidity,millivolt,2017-09-03T09:30,554.7906
+Sensor3,dew point,meters,2017-09-03T09:00,865.615
+Sensor4,Depth,Days,2017-09-08T00:30,298.93193
+Sensor5,Width,p.e.,2017-09-06T03:45,516.3001
+Sensor6,Length,p.e.,2017-09-02T01:45,340.0
+Sensor7,users,dd/mm/yyyy hh:mm:ss,2017-09-08T15:15,827.1785
+Sensor8,height,Km,2017-09-07T04:15,83.320
+Sensor9,Duration,metres per second (m/s),2017-09-08T16:00,534.6054
+Sensor10,Pressure,p.e.,2017-09-07T07:15,633.73443

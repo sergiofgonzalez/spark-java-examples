@@ -30,7 +30,7 @@ It also gives a lot of details about how the configuration has been used, and th
 
 ### Static Configuration
 *wconf* allows you to write a couple of files:
-+ a `config/commonf.conf` file with configuration details that are not suject of major changes
++ a `config/commonf.conf` file with configuration details that are not subject of major changes
 + an application-level properties file `config/application.conf` with application level properties, profiles, etc. which allows for a lot of configuration flexibility.
 
 Those files are considered *static* because they are placed under `src/main/resources` and will be packaged in the jar and therefore distributed to all Spark executors when running in a cluster.
