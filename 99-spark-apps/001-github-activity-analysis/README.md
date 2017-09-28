@@ -1,4 +1,4 @@
-# 001-github-activity-analysis
+# GitHub activity Analysis
 > Analyzing actions on GitHub using the SparkApplicationTemplate and wconf
 
 ## Application Specs

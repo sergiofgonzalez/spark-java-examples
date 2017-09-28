@@ -104,3 +104,6 @@ The Spark Application Template is readily available for the different environmen
 
 While bootstrapping, the Spark application template will look for a specific configuration property named `spark.master` and use it to configure the `SparkConf` object with which the `SparkSession` is created. However, if you use `spark-submit --master` the value you pass will take precedence over the one configured in `spark.master`.
 
+## Examples
+
+You can find a simple example of Spark application template usage in [Reading CSV and Writing Parquets](../../99-spark-apps/002-read-csv-write-dataset/) and a more contrived example in [GitHub activity Analysis ](../../99-spark-apps/001-github-activity-analysis/)

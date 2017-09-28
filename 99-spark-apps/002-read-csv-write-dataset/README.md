@@ -1,4 +1,4 @@
-# 002-read-csv-write-dataset
+# Reading CSV and Writing Parquet Datasets
 > Reading CSV files and writing datasets with different compression format
 
 ## Application Specs
