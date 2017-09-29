@@ -24,6 +24,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.broadcast.Broadcast;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
+import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
 import org.slf4j.Logger;
@@ -130,6 +131,13 @@ public class AppRunner {
 			printConfigValues(Arrays.asList("wconf_app_properties", "dummy", "spark.master"));
 			System.out.println(record);	
 		});
+		
+		/* and write to file in CSV format in single file */
+		filteredOrderedData
+					.coalesce(1)
+					.write()
+					.mode(SaveMode.Overwrite)
+					.csv(wconf().get("files.output_path"));
 	};
 
 		
