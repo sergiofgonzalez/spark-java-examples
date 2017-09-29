@@ -24,3 +24,9 @@ Illustrates how to obtain a histogram from the data inside a `JavaDoubleRDD`.
 
 ## [08 &mdash; Hello Approx Sum and Mean](./008-hello-approx-sum-and-mean/)
 Illustrates how to obtain an approximate sum and mean from a `JavaDoubleRDD`.
+
+## [09 &mdash; Hello RDD creation](./009-hello-rdd-creation/)
+Illustrates how to create `JavaRDD`.
+
+## [10 &mdash; Hello PairRDD creation](./009-hello-rdd-creation/)
+Illustrates how to create `JavaRDD`.
