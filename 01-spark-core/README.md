@@ -28,5 +28,5 @@ Illustrates how to obtain an approximate sum and mean from a `JavaDoubleRDD`.
 ## [09 &mdash; Hello RDD creation](./009-hello-rdd-creation/)
 Illustrates how to create `JavaRDD`.
 
-## [10 &mdash; Hello PairRDD creation](./009-hello-rdd-creation/)
-Illustrates how to create `JavaRDD`.
+## [10 &mdash; Hello PairRDD creation](./010-hello-pair-rdd-creation/)
+Illustrates how to create `JavaPairRDD`.
