@@ -6,3 +6,6 @@ Analyzing actions on GitHub using the *SparkApplicationTemplate* and *wconf*.
 
 ## [02 &mdash; Reading CSV and Writing Parquets](./002-read-csv-write-dataset/)
 Reading CSV files using Spark core methods and writing Parquet datasets with different compression formats.
+
+## [03 &mdash; Processing a structured Purchase Log with Spark Core](./003-complimentary-customer-gifts/)
+The application loads a structured text file and applies some business rules using Spark Core module. The result of the processing is then written to the local file system as a text file with the same structure.

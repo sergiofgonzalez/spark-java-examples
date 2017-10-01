@@ -31,7 +31,7 @@ Example:
 Text lines, one product per line, fields delimited by `#`:
 
 Example:
-25#Barbie Shopping Mall Playset#437.5#9
+`25#Barbie Shopping Mall Playset#437.5#9`
 
 | Pos | Description  | Data Type | Example                      |
 |-----|--------------|-----------|------------------------------|
@@ -49,7 +49,7 @@ Example:
 + Creating `JavaPairRDD` using `JavaRDD.mapToPair`
 + Using `JavaPairRDD.keys()` to obtain a `JavaRDD` with the keys of a `JavaPairRDD`
 + Using `JavaRDD.distinct()` to eliminate duplicates in a `JavaRDD`
-+ Using `count()` to obtain the number of elements in an RDD (available for `JavaRDD` and `JavaPairRDD`
++ Using `count()` to obtain the number of elements in an RDD (available for `JavaRDD` and `JavaPairRDD`)
 + Using `JavaPairRDD.countByKey` to obtain a materialized `Map` that accumulates the occurrences of each key
 + Using `JavaPairRDD.lookup` to obtain the `Tuple2` with the given key
 + Using `JavaPairRDD.mapValues` to perform transformations on the values of `JavaPairRDD`. As the *RDDs* are immutable a new *RDD* is created as a consequence of the transformation
