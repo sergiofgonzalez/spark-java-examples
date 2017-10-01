@@ -26,6 +26,7 @@
     <module>008-hello-approx-sum-and-mean</module>    
     <module>009-hello-rdd-creation</module>    
     <module>010-hello-pair-rdd-creation</module>
+    <module>011-hello-parsing-delimited-file</module>    
   </modules>
 
 </project>

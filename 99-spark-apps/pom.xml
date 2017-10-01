@@ -17,7 +17,8 @@
 
   <modules>
     <module>001-github-activity-analysis</module>    
-    <module>002-read-csv-write-dataset</module>    
+    <module>002-read-csv-write-dataset</module>
+    <module>003-complimentary-customer-gifts</module>    
   </modules>
 
 </project>

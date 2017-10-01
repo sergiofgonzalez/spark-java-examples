@@ -30,3 +30,6 @@ Illustrates how to create `JavaRDD`.
 
 ## [10 &mdash; Hello PairRDD creation](./010-hello-pair-rdd-creation/)
 Illustrates how to create `JavaPairRDD`.
+
+## [11 &mdash; Hello parsing delimited files](./011-hello-parsing-delimited-files/)
+Illustrates how to load the contents of a file and parse its contents manually.
