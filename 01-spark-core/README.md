@@ -33,3 +33,17 @@ Illustrates how to create `JavaPairRDD`.
 
 ## [11 &mdash; Hello parsing delimited files](./011-hello-parsing-delimited-files/)
 Illustrates how to load the contents of a file and parse its contents manually.
+
+## [12 &mdash; Changing the list of values associated to a key with JavaPairRDD.flatMapValues](./012-adding-values-to-pair-rdd-with-map-values/)
+Illustrates how to use `flatMapValues` to change the number of elements associated to a given key when working with `JavaPairRDD`.
+
+## [13 &mdash; Adding records to an RDD](./013-adding-records-to-an-rdd/)
+Illustrates how to use `union` to add records to a `JavaRDD` or `JavaPairRDD`.
+
+## [14 &mdash; Sorting a PairRDD by Value](./014-sorting-pair-rdd-by-value/)
+Illustrates how to sort a `JavaPairRDD` by the value, or by a field of the value.
+
+## [15 &mdash; Hello saving an RDD](./015-hello-save-rdd/)
+Illustrates how to save an RDD on the file system.
+
+

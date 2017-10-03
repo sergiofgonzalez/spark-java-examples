@@ -27,6 +27,10 @@
     <module>009-hello-rdd-creation</module>    
     <module>010-hello-pair-rdd-creation</module>
     <module>011-hello-parsing-delimited-file</module>    
+    <module>012-adding-values-to-pair-rdd-with-map-values</module>
+    <module>013-adding-records-to-an-rdd</module>    
+    <module>014-sorting-pair-rdd-by-value</module>
+    <module>015-hello-save-rdd</module>
   </modules>
 
 </project>
