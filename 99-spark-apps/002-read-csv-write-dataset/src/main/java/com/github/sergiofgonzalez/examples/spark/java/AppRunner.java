@@ -3,6 +3,7 @@ package com.github.sergiofgonzalez.examples.spark.java;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
+
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
@@ -28,20 +29,54 @@ public class AppRunner {
 						.withPropertiesFile("config/spark-job.conf")
 						.withExtraConfigVars(args)
 						.doing(csvTestApp)
-						.afterSparkInitializedDo(compressionHook)
+						.afterSparkInitializedDo(initializationHook)
 						.submit());		
 	}
 	
 	
-
+	
 	
 
-//	SqlContext.setConf("spark.sql.parquet.compression.codec", "uncompressed");
 	private static final BiConsumer<SparkSession, JavaSparkContext> compressionHook = (spark, sparkContext) -> {
-		spark.sqlContext().setConf("spark.sql.parquet.compression.codec", wconf().get("files.compression")); // snappy, gzip, uncompressed
+		String compressionMethod = wconf().get("files.compression");
+		LOGGER.debug("Setting compression method to {}", compressionMethod);
+		spark.sqlContext().setConf("spark.sql.parquet.compression.codec", wconf().get("files.compression")); // snappy, gzip, uncompressed	
+	}; 
+		
+
+	private static final BiConsumer<SparkSession, JavaSparkContext> cloudStorageHook = (spark, sparkContext) -> {
+		String storageType = wconf().get("storage_type");
+		
+		switch (storageType) {
+			case "aws":
+				LOGGER.debug("Running the tests on AWS S3");
+				sparkContext.hadoopConfiguration().set("fs.s3a.access.key", wconf().get("access_key_id"));
+				sparkContext.hadoopConfiguration().set("fs.s3a.secret.key", wconf().get("secret_access_key"));
+				break;
+			
+			case "azure":
+				LOGGER.debug("Running the tests on Azure Blob Storage");	
+				sparkContext.hadoopConfiguration().set(String.format("fs.azure.account.key.%s.blob.core.windows.net", wconf().get("storage_account")), wconf().get("storage_key"));					
+				break;
+			
+
+			case "local":				
+				LOGGER.debug("Running the tests on the local file system");
+				break;
+				
+			default:
+				LOGGER.error("The storage type {} is not an expcted value. Expected values: local|aws|azure", storageType);
+				throw new IllegalArgumentException("Unrecognized value for storageType");
+		}
 	};	
 	
-	/* The Spark application to execute */
+	private static final BiConsumer<SparkSession, JavaSparkContext> initializationHook = (spark, sparkContext) -> {
+		compressionHook.andThen(cloudStorageHook).accept(spark, sparkContext);
+	}; 
+	
+	
+	
+	
 	@SuppressWarnings("serial")
 	private static final BiConsumer<SparkSession, JavaSparkContext> sensorCsvTestApp = (spark, sparkContext) -> {
 
@@ -54,6 +89,9 @@ public class AppRunner {
 		}};
 		
 		StructType sensorSchema = DataTypes.createStructType(schemaFields);
+		
+		String inputFile = wconf().get("files.input");
+		LOGGER.debug("About to load in dataset {}", inputFile);
 		
 		Dataset<Row> dataset = spark								
 								.read()
@@ -70,7 +108,7 @@ public class AppRunner {
 		dataset.write()
 			.mode(SaveMode.Overwrite)
 			.parquet(wconf().get("files.output_path"));
-		
+	
 		Dataset<Row> savedParquet = spark.read().parquet(wconf().get("files.output_path"));
 		savedParquet.show(10, false);
 		System.out.println("SavedParquet record count: " + savedParquet.count());
